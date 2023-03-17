@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>АНО ДПО "АСПКС"</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        
+            
+             
+        <link rel="stylesheet" href="scss/enjoyhint.css">    
+        <link rel="stylesheet" href="scss/style.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg bg-body-regular">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">Navbar</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Переключатель навигации">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Price</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown Link
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Действие</a></li>
+                              <li><a class="dropdown-item" href="#">Другое действие</a></li>
+                              <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <section class="main">
+            <div class="container">
+                <div class="main__wrap flex">
+                    <nav class="work__nav flex">
+                        <button aria-label="Тестирование"class="new_btn work__link work__link--active" data-path="one">Тестирование</button>
+                        <button aria-label="Практика" class="work__link" data-path="two">Практика</button>
+                        <button aria-label="Экзамен" class="work__link" data-path="three">Экзамен</button>
+                    </nav>
+                    <div class="tabs-content flex">
+                        <div class="tabs-item tabs-item--active" data-target="one">
+                            <h3 class="tabs__title">
+                                Тестирование по&nbsp;модулю&nbsp;<span class="digit">1</span>
+                            </h3>
+                            <p class="tabs__descr">
+                                Значимость этих проблем настолько очевидна,
+                                что социально-экономическое развитие обеспечивает 
+                                широкому кругу (специалистов) участие в&nbsp;формировании 
+                                дальнейших направлений развития.
+                            </p>
+                        </div>
+                        <div class="tabs-item" data-target="two">
+                            <h3 class="tabs__title">
+                                Практика по&nbsp;модулю&nbsp;<span class="digit">1</span>
+                            </h3>
+                            <p class="tabs__descr">
+                                Значимость этих проблем настолько очевидна,
+                                что социально-экономическое развитие обеспечивает 
+                                широкому кругу (специалистов) участие в&nbsp;формировании 
+                                дальнейших.
+                            </p>
+                        </div>
+                        <div class="tabs-item" data-target="three">
+                            <h3 class="tabs__title">
+                                Экзамен по&nbsp;модулю&nbsp;<span class="digit">1</span>
+                            </h3>
+                            <p class="tabs__descr">
+                                Значимость этих проблем настолько очевидна,
+                                что обеспечивает 
+                                широкому кругу (специалистов) участие в&nbsp;формировании 
+                                дальнейших направлений развития.
+                            </p>
+                        </div>
+                        <button class="new_btn3 button">Начать</button>
+                    </div>
+                    <nav class="work__nav flex">
+                        <button onclick="changeDigitOne()" class="new_btn2 work__link work__link--active" data-path="one">Модуль 1</button>
+                        <button onclick="changeDigitTwo()" class="work__link " data-path="two">Модуль 2</button>
+                        <button onclick="changeDigitThree()" class="work__link" data-path="three">Модуль 3</button>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/kineticjs/5.2.0/kinetic.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="enjoyhint-master/enjoyhint.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,215 @@
+/*glob*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+$white: #ffffff;
+$btn-main: #7749F8;
+$shadow: 0 0 4px $btn-main;
+$outline: 1px solid #DEE2E6;
+
+@mixin btnReset {
+    display: inline-block;
+    width: 100%;
+    border: none;
+    outline: $outline;
+    padding: 15px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    background-color: transparent;
+    transition: all .2s ease-in-out;
+}
+
+@mixin btnAct {
+    background-color: $btn-main;
+    color: $white;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.header {
+    margin-bottom: 50px;
+}
+
+.navbar-nav  {
+    font-size: 12px;
+    .nav-link {
+        position: relative;
+        transition: all .2s ease-in-out;
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $btn-main;
+            transform: scaleX(0);
+            transition: transform .2s ease-in-out;
+        }
+        &:hover {
+            color: $btn-main;  
+        }  
+        &:hover::after {
+            transform: scaleX(1);
+        }
+    }
+
+    .dropdown-menu {
+        font-size: 12px;
+    }
+    
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.container .navbar-toggler {
+    &:hover {
+        box-shadow: $shadow; 
+    }
+    &:focus {
+        outline: 1px solid transparent;
+    }
+    &:active {
+        outline: none;
+        border: none;
+    }
+    .navbar-toggler-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.main {
+    margin-bottom: 50px;
+}
+
+.main__wrap {
+    justify-content: space-between;
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        align-items: center;
+    }
+    .work__nav {
+        flex-direction: column;
+        width: 25%;
+        height: 141px;
+        border-radius: 5px;
+        outline: $outline;
+        @media (max-width: 1200px) {
+            flex-direction: row;
+            width: 100%;
+            height: 45px;
+        }
+    }
+    .work__link {
+        @include btnReset;
+        &:hover {
+          font-size: 12.5px;
+          box-shadow: $shadow; 
+        }
+        &:active {
+            @include btnAct; 
+        }
+        @media (max-width: 1200px) {
+            width: calc(100% / 3);
+            padding: 5px;
+            text-align: center;
+        }
+      
+    }
+
+    .work__link:first-child {
+        border-radius: 5px 5px 0 0;
+        @media (max-width: 1200px) {
+            border-radius: 5px 0px 0 5px;
+        }
+    }
+
+    .work__link:last-child {
+        border-radius: 0 0 5px 5px;
+        @media (max-width: 1200px) {
+            border-radius: 0 5px 5px 0;
+        }
+    }
+    .work__link--active {
+        @include btnAct;
+    }
+    
+}
+
+
+.tabs-content {
+    width: 60%;
+    padding: 24px;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 1200px) {
+        width: 100%;
+    }
+    .tabs__title {
+        margin-bottom: 10px;
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .tabs__descr {
+        font-family: Inter;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+    .tabs-item {
+        display: none;
+        opacity: 0;
+        
+    }
+    
+    .tabs-item--active {
+        display: block;
+        opacity: 1;
+    
+    }
+
+    .button {
+        @include btnReset;
+        @include btnAct;
+        width: 100px;
+        border-radius: 5px;
+        text-align: center;
+        &:hover {
+            font-size: 12.5px;
+            box-shadow: $shadow; 
+          }
+    }
+}
+
+
+
+
+
+
+
